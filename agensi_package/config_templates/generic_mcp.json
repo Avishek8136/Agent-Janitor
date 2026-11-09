@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "agent-janitor": {
+      "command": "python",
+      "args": ["-m", "agent_janitor.mcp_server"],
+      "env": {}
+    }
+  }
+}
