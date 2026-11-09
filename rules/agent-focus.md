@@ -2,6 +2,8 @@
 
 This rule prevents AI coding agents from falling into the **"Agent Distraction"** trap (investigating or modifying unprompted inline TODOs, FIXMEs, or closed bug references).
 
+> Reference: [Agent Distraction (Google Developers Blog)](https://developers.googleblog.com/agent-distraction/) by Sam Saccone & Madhuri Garikapati (Nov 6, 2026).
+
 ## Directives for Agents
 
 1. **Strict Scope Discipline:**

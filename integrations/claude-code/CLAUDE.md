@@ -1,7 +1,7 @@
 # CLAUDE.md - Anti-Distraction & Scope Discipline
 
 ## Scope Discipline & Handling Inline Bug/TODO Comments
-According to research by Google (Nov 2026), 83% of agent reactions to inline TODOs/bugs are unprompted, leading to 70% more steps and 77% more tokens.
+According to research by Google (Nov 2026, [Agent Distraction](https://developers.googleblog.com/agent-distraction/)), 83% of agent reactions to inline TODOs/bugs are unprompted, leading to 70% more steps and 77% more tokens.
 
 1. **Strict Prompt Boundaries:**
    - Focus exclusively on the user's requested task.

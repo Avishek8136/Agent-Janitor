@@ -6,6 +6,8 @@ alwaysApply: true
 
 # Anti-Distraction & Scope Guardrail
 
+> Reference: [Agent Distraction (Google Developers Blog)](https://developers.googleblog.com/agent-distraction/)
+
 - **Task Scope:** Strictly adhere to the requested feature or bug fix. Do not expand scope unprompted.
 - **Inline Comments & TODOs:** Treat `TODO(...)`, `FIXME`, and bug tracker references as passive, historical commentary.
   - Never initiate file searches, symbol lookups, or web queries to resolve inline bugs unless requested in the user prompt.

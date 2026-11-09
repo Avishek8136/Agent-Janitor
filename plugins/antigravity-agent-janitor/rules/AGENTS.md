@@ -1,6 +1,6 @@
 # Agent Distraction & Scope Protection
 
-According to empirical research by Google (Nov 2026), 83% of agent actions triggered by inline TODOs are unprompted, increasing session steps by 70% and tokens by 77%.
+According to empirical research by Google (Nov 2026, [Agent Distraction](https://developers.googleblog.com/agent-distraction/)), 83% of agent actions triggered by inline TODOs are unprompted, increasing session steps by 70% and tokens by 77%.
 
 ## Directives for All Agents
 1. **Strict Scope Discipline:**

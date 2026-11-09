@@ -1,7 +1,7 @@
 # 🧹 Agent Janitor: Anti-Distraction Suite for AI Coding Agents
 
 > **"What is easy for humans to skim past in code, agents see as a call to action."**  
-> — Google Developers Blog (*Agent Distraction*, Nov 2026)
+> — [*Agent Distraction* (Google Developers Blog, Nov 6, 2026)](https://developers.googleblog.com/agent-distraction/) by Sam Saccone & Madhuri Garikapati
 
 `agent-janitor` is an automated tool suite and behavioral guardrail designed to eliminate **Agent Distraction** in software repositories.
 
@@ -174,3 +174,13 @@ You can directly copy [`rules/agent-focus.md`](file:///d:/Codes/Google%20Blog/ru
 - DO NOT initiate tool searches or codebase queries for referenced bug IDs unless explicitly commanded in the user's prompt.
 - DO NOT expand scope or attempt to resolve unprompted TODOs found during research.
 ```
+
+---
+
+## 📚 References & Background
+
+* **Original Research:** [Agent Distraction](https://developers.googleblog.com/agent-distraction/)
+* **Authors:** Sam Saccone (Senior Staff Software Engineer) & Madhuri Garikapati (Senior Staff Data Scientist) at Google
+* **Published:** November 6, 2026 on the [Google Developers Blog](https://developers.googleblog.com/)
+* **Key Findings:** Based on traces across hundreds of millions of agent steps, unprompted inline TODO interactions account for 83% of detour sessions, causing +70% more steps, +77% more tokens, and +105% more developer wait time.
+
