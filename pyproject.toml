@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-janitor"
+version = "0.1.0"
+description = "Neutralize agent distraction traps, prune obsolete TODOs, and prevent AI scope creep."
+authors = [{ name = "Agent Janitor Team" }]
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = []
+
+[project.scripts]
+agent-janitor = "agent_janitor.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["agent_janitor*"]
+

@@ -1,0 +1,31 @@
+name: Agent Anti-Distraction Presubmit
+
+on:
+  pull_request:
+    branches: [main, master, develop]
+  push:
+    branches: [main, master]
+
+jobs:
+  check-distraction-traps:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install Agent Janitor
+        run: pip install .
+
+      - name: Audit & Check Codebase for Agent Traps
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          agent-janitor audit . --output agent-audit.md
+          agent-janitor check .
