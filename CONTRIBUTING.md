@@ -6,8 +6,8 @@ Thank you for your interest in improving `agent-janitor`! We welcome contributio
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-username/agent-janitor.git
-   cd agent-janitor
+   git clone https://github.com/Avishek8136/Agent-Janitor.git
+   cd Agent-Janitor
    ```
 
 2. **Create and activate a virtual environment:**

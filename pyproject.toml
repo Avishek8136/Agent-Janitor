@@ -50,9 +50,9 @@ dev = [
 agent-janitor = "agent_janitor.cli:main"
 
 [project.urls]
-Homepage = "https://github.com/agent-janitor/agent-janitor"
-Repository = "https://github.com/agent-janitor/agent-janitor"
-"Bug Tracker" = "https://github.com/agent-janitor/agent-janitor/issues"
+Homepage = "https://github.com/Avishek8136/Agent-Janitor"
+Repository = "https://github.com/Avishek8136/Agent-Janitor"
+"Bug Tracker" = "https://github.com/Avishek8136/Agent-Janitor/issues"
 
 [tool.setuptools.packages.find]
 include = ["agent_janitor*"]

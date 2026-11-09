@@ -3,11 +3,11 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/agent-janitor/agent-janitor/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/agent-janitor/agent-janitor/ci.yml?branch=main&label=CI&style=flat-square" alt="CI Status"></a>
+  <a href="https://github.com/Avishek8136/Agent-Janitor/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/Avishek8136/Agent-Janitor/ci.yml?branch=master&label=CI&style=flat-square" alt="CI Status"></a>
   <a href="https://pypi.org/project/agent-janitor/"><img src="https://img.shields.io/badge/python-3.9%20%7C%203.10%20%7C%203.11%20%7C%203.12%20%7C%203.13-blue?style=flat-square" alt="Python Versions"></a>
   <a href="https://modelcontextprotocol.io/"><img src="https://img.shields.io/badge/MCP-Compatible-8A2BE2?style=flat-square" alt="MCP Compatible"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0-green?style=flat-square" alt="License"></a>
-  <a href="https://github.com/agent-janitor/agent-janitor/pulls"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome"></a>
+  <a href="https://github.com/Avishek8136/Agent-Janitor/pulls"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome"></a>
 </p>
 
 <p align="center">
