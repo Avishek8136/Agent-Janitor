@@ -8,6 +8,7 @@ Use this exact information when uploading your skill on [https://www.agensi.io/s
 
 * **Skill Name:** `Agent-Janitor`
 * **Headline / Subtitle:** `Stop AI coding agents from chasing stale TODOs and embarking on unprompted side-quests.`
+* **Skill Logo (Square 512×512):** Upload [`assets/logo.png`](file:///d:/Codes/Google%20Blog/assets/logo.png) (or `assets/logo.jpg`)
 * **Pricing:** **Free ($0)** *(as recommended by Joeri for direct self-hosted MCP skill listings)*
 * **Category:** `Developer Tools` / `Code Quality` / `Agent Guardrails`
 * **Tags:** `mcp`, `claude-code`, `cursor`, `copilot`, `code-quality`, `anti-distraction`, `todo-cleaner`, `developer-tools`
