@@ -1,0 +1,21 @@
+name: Feature Request
+description: Propose a new feature, tracker integration, or agent capability.
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: Have an idea for improving agent hygiene or adding a new IDE/assistant integration?
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem Statement
+      description: What limitation or agent trap are you encountering?
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution
+      description: How should Agent Janitor handle or remediate this?
+    validations:
+      required: true
