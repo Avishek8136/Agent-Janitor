@@ -5,15 +5,58 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "agent-janitor"
 version = "0.1.0"
-description = "Neutralize agent distraction traps, prune obsolete TODOs, and prevent AI scope creep."
-authors = [{ name = "Agent Janitor Team" }]
+description = "Neutralize agent distraction traps, prune obsolete TODOs, and prevent AI scope creep in codebases."
 readme = "README.md"
-requires-python = ">=3.8"
+license = { text = "Apache-2.0" }
+requires-python = ">=3.9"
+authors = [
+  { name = "Google Antigravity Pair Programmer" }
+]
+keywords = [
+  "ai-agents",
+  "code-cleaner",
+  "developer-tools",
+  "mcp",
+  "claude-code",
+  "cursor",
+  "antigravity",
+  "copilot",
+  "todo-cleaner"
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: Apache Software License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Software Development :: Quality Assurance",
+  "Topic :: Software Development :: Build Tools"
+]
 dependencies = []
+
+[project.optional-dependencies]
+dev = [
+  "pre-commit>=3.5.0",
+  "ruff>=0.3.0",
+  "pytest>=7.0.0"
+]
 
 [project.scripts]
 agent-janitor = "agent_janitor.cli:main"
 
+[project.urls]
+Homepage = "https://github.com/agent-janitor/agent-janitor"
+Repository = "https://github.com/agent-janitor/agent-janitor"
+"Bug Tracker" = "https://github.com/agent-janitor/agent-janitor/issues"
+
 [tool.setuptools.packages.find]
 include = ["agent_janitor*"]
 
+[tool.ruff]
+line-length = 100
+target-version = "py39"
