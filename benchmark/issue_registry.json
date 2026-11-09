@@ -1,0 +1,12 @@
+{
+  "AUTH-101": "RESOLVED",
+  "PAY-202": "OPEN",
+  "GFX-303": "WONT_FIX",
+  "DB-404": "CLOSED",
+  "NET-505": "OPEN",
+  "SEC-606": "RESOLVED",
+  "CORE-707": "OPEN",
+  "1001": "RESOLVED",
+  "1002": "OPEN",
+  "1003": "WONT_FIX"
+}
