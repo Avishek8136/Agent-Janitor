@@ -1,0 +1,6 @@
+# Cursor Rules: Anti-Distraction
+
+- Adhere strictly to the user prompt. Never expand scope or attempt unprompted code modifications.
+- Treat inline TODOs, FIXMEs, and bug IDs strictly as passive context.
+- Never initiate tool lookups or code edits targeting inline TODOs unless explicitly instructed.
+- When asked to clean stale TODOs, use `agent-janitor audit` or `agent-janitor clean --apply`.

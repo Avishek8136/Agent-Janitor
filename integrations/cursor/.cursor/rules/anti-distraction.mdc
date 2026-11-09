@@ -1,0 +1,13 @@
+---
+description: Prevents AI agent distraction, side-quests, and unprompted TODO investigations.
+globs: *
+alwaysApply: true
+---
+
+# Anti-Distraction & Scope Guardrail
+
+- **Task Scope:** Strictly adhere to the requested feature or bug fix. Do not expand scope unprompted.
+- **Inline Comments & TODOs:** Treat `TODO(...)`, `FIXME`, and bug tracker references as passive, historical commentary.
+  - Never initiate file searches, symbol lookups, or web queries to resolve inline bugs unless requested in the user prompt.
+  - 41% of inline bug comments point to tickets that are already closed or obsolete. Do not assume comments describe active issues.
+- **Maintenance:** To audit or clean distraction traps across the repo, use the `agent-janitor` CLI (`agent-janitor audit .` / `agent-janitor clean .`).

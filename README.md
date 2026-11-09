@@ -39,6 +39,65 @@ According to Google's study across millions of agent sessions:
 
 ---
 
+## 🔌 Multi-App Plugins, Skills & Integrations
+
+`agent-janitor` works natively across all major AI coding platforms:
+
+### ⚡ One-Click Auto-Setup
+Install guardrails and skills into any repository for all your AI coding assistants at once:
+```bash
+# Install for all apps (Claude Code, Cursor, Windsurf, Copilot, Antigravity):
+agent-janitor init . --all
+
+# Or install for a specific assistant:
+agent-janitor init . --claude
+agent-janitor init . --cursor
+agent-janitor init . --windsurf
+agent-janitor init . --copilot
+agent-janitor init . --antigravity
+```
+
+---
+
+### 1. 🤖 Google Antigravity Plugin & Skill
+The **Agent Janitor Plugin** is installed directly in `~/.gemini/config/plugins/agent-janitor`:
+* **Bundled Skill:** `anti-distraction` (teaches Antigravity how to audit, prune dead-ends, and mask triggers).
+* **Bundled Rule:** `rules/AGENTS.md` (active anti-distraction guardrail for all sessions).
+* **Bundled MCP Server:** Automatically connects the audit and cleaning tools to Antigravity sessions.
+
+### 2. 🧠 Claude Code (Anthropic)
+* **`CLAUDE.md`**: Directs Claude Code to adhere strictly to prompt scope and ignore inline TODOs.
+* **Custom Slash Command (`/janitor`)**: Installed to `.claude/commands/janitor.md` so you can type `/janitor` inside Claude Code to audit or clean the repo.
+* **MCP Integration**: Connect directly by running:
+  ```bash
+  claude mcp add agent-janitor python -m agent_janitor.mcp_server
+  ```
+
+### 3. 🎯 Cursor
+* **`.cursor/rules/anti-distraction.mdc`**: Cursor's modern Markdown Component rule format with `alwaysApply: true`.
+* **`.cursorrules`**: Classic Cursor scope guardrail.
+* **MCP Server**: Add to Cursor Settings > Features > MCP:
+  * **Type:** `command`
+  * **Command:** `python -m agent_janitor.mcp_server`
+
+### 4. 🌊 Windsurf (Codeium)
+* **`.windsurfrules`**: Injected into Cascade's workspace memory to prevent unprompted TODO investigations.
+
+### 5. 🐙 GitHub Copilot
+* **`.github/copilot-instructions.md`**: Active workspace instructions for GitHub Copilot Workspace, Copilot Edits, and Copilot Chat.
+
+### 6. 🌐 Universal MCP (Model Context Protocol) Server
+The built-in MCP server runs on stdio without third-party dependencies:
+```bash
+python -m agent_janitor.mcp_server
+```
+**Exposed MCP Tools:**
+* `audit_codebase(path, mock_status_file, github_repo, fossil_days)`: Audits for dead-ends (41%), scope-creep (57%), and fossilized debt.
+* `clean_dead_ends(path, apply, mock_status_file)`: Prunes obsolete comments referencing closed issues.
+* `mask_triggers(path, apply)`: Converts active `TODO/FIXME` action verbs into passive developer notes.
+
+---
+
 ## 🚀 Quick Start
 
 ### 1. Install

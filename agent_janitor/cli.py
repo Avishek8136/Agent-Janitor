@@ -23,6 +23,13 @@ from .trackers.github_tracker import GitHubTracker
 from .trackers.mock_tracker import MockTracker
 from .cleaner import CodeCleaner
 from .reporter import generate_terminal_summary, generate_markdown_report
+from .installer import (
+    install_claude,
+    install_cursor,
+    install_windsurf,
+    install_copilot,
+    install_antigravity,
+)
 
 def run_scan_and_classify(
     target_dir: Path,
@@ -133,6 +140,35 @@ def handle_mask(args):
         print(f"\n[APPLIED] Successfully neutralized triggers across {len(diffs)} files.")
 
 
+def handle_init(args):
+    target_dir = Path(args.path).resolve()
+    install_all = args.all or not (args.claude or args.cursor or args.windsurf or args.copilot or args.antigravity)
+
+    print(f"Installing Anti-Distraction guardrails and integrations into '{target_dir}'...\n")
+
+    if install_all or args.claude:
+        if install_claude(target_dir):
+            print("  [OK] Claude Code integration: CLAUDE.md & .claude/commands/janitor.md")
+
+    if install_all or args.cursor:
+        if install_cursor(target_dir):
+            print("  [OK] Cursor integration: .cursorrules & .cursor/rules/anti-distraction.mdc")
+
+    if install_all or args.windsurf:
+        if install_windsurf(target_dir):
+            print("  [OK] Windsurf integration: .windsurfrules")
+
+    if install_all or args.copilot:
+        if install_copilot(target_dir):
+            print("  [OK] GitHub Copilot integration: .github/copilot-instructions.md")
+
+    if install_all or args.antigravity:
+        if install_antigravity():
+            print("  [OK] Google Antigravity: Plugin installed to ~/.gemini/config/plugins/agent-janitor")
+
+    print("\n[Done] All requested AI agent guardrails and skills are now configured!")
+
+
 def handle_check(args):
     target_dir = Path(args.path).resolve()
     items = run_scan_and_classify(
@@ -168,6 +204,17 @@ def main():
     audit_parser.add_argument("--github-repo", help="Target GitHub repo (e.g. owner/repo)")
     audit_parser.add_argument("--fossil-days", type=int, default=365, help="Days threshold for fossil debt (default: 365)")
     audit_parser.set_defaults(func=handle_audit)
+
+    # Init command
+    init_parser = subparsers.add_parser("init", help="Install anti-distraction rules and plugins for coding apps")
+    init_parser.add_argument("path", nargs="?", default=".", help="Path to repository or directory")
+    init_parser.add_argument("--all", action="store_true", help="Install for all supported apps")
+    init_parser.add_argument("--claude", action="store_true", help="Install Claude Code rules & slash command")
+    init_parser.add_argument("--cursor", action="store_true", help="Install Cursor .cursorrules & .mdc")
+    init_parser.add_argument("--windsurf", action="store_true", help="Install Windsurf .windsurfrules")
+    init_parser.add_argument("--copilot", action="store_true", help="Install GitHub Copilot instructions")
+    init_parser.add_argument("--antigravity", action="store_true", help="Install Antigravity plugin")
+    init_parser.set_defaults(func=handle_init)
 
     # Clean command
     clean_parser = subparsers.add_parser("clean", help="Prune obsolete/closed TODO references")

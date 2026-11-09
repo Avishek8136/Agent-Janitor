@@ -1,0 +1,10 @@
+{
+  "name": "agent-janitor",
+  "displayName": "Agent Janitor & Anti-Distraction",
+  "description": "Protects AI coding agents from distraction traps, side-quests, and scope creep caused by obsolete inline TODOs and closed bug tickets.",
+  "suggestedPrompts": [
+    "Audit this codebase for agent distraction traps and dead-end TODOs",
+    "Prune obsolete TODO comments referencing closed issues",
+    "Mask active TODO action verbs into passive developer notes"
+  ]
+}
