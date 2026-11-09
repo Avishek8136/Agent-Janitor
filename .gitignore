@@ -72,3 +72,6 @@ ehthumbs.db
 scratch/
 tmp/
 *.log
+
+# Private local playbooks / launch strategies
+LAUNCH_PLAYBOOK.md
